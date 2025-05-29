@@ -1,0 +1,249 @@
+body {
+  background-color: #151b23;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  color: whitesmoke;
+  width: 100%;
+  height: auto;
+  background-color: skyblue;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.head {
+  font-size: 30px;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "JetBrains Mono", serif;
+  color: rgb(255, 255, 255);
+}
+
+.timer {
+  height: 60px;
+  width: 70px;
+  margin-top: 68px;
+  padding: 12px;
+  border-radius: 20%;
+  font-family: "JetBrains Mono", serif;
+}
+
+.errors,
+.accuracy,
+.wpm {
+  height: 60px;
+  width: 70px;
+  margin-inline: 50px;
+  margin-top: 200px;
+  border-radius: 20%;
+  font-family: "JetBrains Mono", serif;
+}
+
+.wpm {
+  display: none;
+}
+
+
+.init_time {
+  font-size: 70px;
+  font-family: "JetBrains Mono", serif;
+}
+
+.init_errors,
+.init_accuracy,
+.init_cpm,
+.init_wpm {
+  font-size: 70px;
+  font-family: "JetBrains Mono", serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content span.correct {
+  color: #ffffff;
+}
+.content span.incorrect {
+  color: #f44336;
+  text-decoration: underline;
+}
+
+.content {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+  cursor: text;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "JetBrains Mono", serif;
+  font-size: 30px;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 240px;
+  width: 1000px;
+  color: #646669;
+}
+
+.content.active {
+  filter: none;
+  pointer-events: auto;
+}
+
+.content:not(.active) {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.content:not(.active)::before {
+  display: block;
+}
+
+.input_display {
+  width: 100%;
+  min-height: 40px;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  outline: none;
+}
+
+.input_display {
+  width: 100%;
+  min-height: 40px;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  outline: none;
+}
+
+.restart {
+  display: none;
+  width: 300px;
+  height: 50px;
+  place-content: center;
+  border-radius: 10px;
+  font-family: "JetBrains Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 200px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.restart:hover {
+  background-color: rgb(182, 182, 182);
+  border: 1px solid rgb(182, 182, 182);
+  color: #151b23;
+}
+
+.start {
+  background-color: skyblue;
+  font-size: 1.5rem;
+  padding: 10px;
+  border: 0px;
+  color: whitesmoke;
+  border-radius: 10px 10px 10px 10px;
+  width: 30%;
+  font-weight: bold;
+  box-shadow: grey 5px 8px 5px;
+}
+.keyboard {
+  margin-top: auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.keyboard-key-grid-first,
+.keyboard-key-grid-second,
+.keyboard-key-grid-third,
+.keyboard-key-grid-fourth {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.keyboard-key-grid-first {
+}
+
+.keyboard-key-grid-second {
+  margin-left: 15px;
+}
+
+.keyboard-key-grid-third {
+  margin-left: 40px;
+}
+
+.keyboard-key-grid-fourth {
+  margin-left: 130px;
+  .keyboard-key {
+    width: 370px;
+  }
+}
+
+.keyboard-key {
+  background-color: rgba(0, 0, 0, 0);
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+  font-family: "JetBrains Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 5px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.keyboard-key.active {
+  background-color: rgb(182, 182, 182);
+  border: 1px solid rgb(182, 182, 182);
+  color: #151b23;
+}
+
+.keyboard-key-key-active {
+  background-color: rgb(255, 255, 255);
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+  font-family: "JetBrains Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  color: #151b23;
+}
+
+
+.error-message {
+  color: #ff4444;
+  text-align: center;
+  margin: 20px;
+  display: none;
+}
