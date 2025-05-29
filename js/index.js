@@ -19,7 +19,7 @@ let currentContent = "";
 let timer = null;
 let isTimerRunning = false;
 let textsArray = [];
-const TEXTS_JSON_PATH = "../json/texts.json";
+const TEXTS_JSON_PATH = "json/texts.json";
 
 // Initialize
 async function init() {
