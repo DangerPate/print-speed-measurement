@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Test</title>
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="border">
+        <div class="header">
+    
+          <div class="wpm">
+            <div class="head">wpm</div>
+            <div class="init_wpm">0</div>
+          </div>
+          
+          <div class="errors">
+            <div class="head">errors</div>
+            <div class="init_errors">0</div>
+          </div>
+          
+          <div class="timer">
+            <div class="init_time">30</div>
+          </div>
+          
+          <div class="accuracy">
+            <div class="head">accuracy</div>
+            <div class="init_accuracy">0</div>
+          </div>
+        </div>
+        </div>
+    
+        <div class="content-wrapper">
+            <div 
+                class="content" 
+                contenteditable="false" 
+                style="backdrop-filter: blur(100px);"
+            ></div>
+        </div>          
+        <button class="restart" onclick="resetValues()" style="display: none;">Повторить</button>
+       </div>
+
+
+    </div>
+    <div class="keyboard">
+        <div class="keyboard-key-grid-first">
+            <div class="keyboard-key" data-char="й">
+                <span>й</span>
+            </div>
+            <div class="keyboard-key" data-char="ц">
+                <span>ц</span>
+            </div>
+            <div class="keyboard-key" data-char="у">
+                <span>у</span>
+            </div>
+            <div class="keyboard-key" data-char="к">
+                <span>к</span>
+            </div>
+            <div class="keyboard-key" data-char="е">
+                <span>е</span>
+            </div>
+            <div class="keyboard-key" data-char="н">
+                <span>н</span>
+            </div>
+            <div class="keyboard-key" data-char="г">
+                <span>г</span>
+            </div>
+            <div class="keyboard-key" data-char="ш">
+                <span>ш</span>
+            </div>
+            <div class="keyboard-key" data-char="щ">
+                <span>щ</span>
+            </div>
+            <div class="keyboard-key" data-char="з">
+                <span>з</span>
+            </div>
+            <div class="keyboard-key" data-char="х">
+                <span>х</span>
+            </div>
+            <div class="keyboard-key" data-char="ъ">
+                <span>ъ</span>
+            </div>
+        </div>
+        <div class="keyboard-key-grid-second">
+            <div class="keyboard-key" data-char="ф">
+                <span>ф</span>
+            </div>
+            <div class="keyboard-key" data-char="ы">
+                <span>ы</span>
+            </div>
+            <div class="keyboard-key" data-char="в">
+                <span>в</span>
+            </div>
+            <div class="keyboard-key" data-char="а">
+                <span>а</span>
+            </div>
+            <div class="keyboard-key" data-char="п">
+                <span>п</span>
+            </div>
+            <div class="keyboard-key" data-char="р">
+                <span>р</span>
+            </div>
+            <div class="keyboard-key" data-char="о">
+                <span>о</span>
+            </div>
+            <div class="keyboard-key" data-char="л">
+                <span>л</span>
+            </div>
+            <div class="keyboard-key" data-char="д">
+                <span>д</span>
+            </div>
+            <div class="keyboard-key" data-char="ж">
+                <span>ж</span>
+            </div>
+            <div class="keyboard-key" data-char="э">
+                <span>э</span>
+            </div>
+        </div>
+        <div class="keyboard-key-grid-third">
+            <div class="keyboard-key" data-char="я">
+                <span>я</span>
+            </div>
+            <div class="keyboard-key" data-char="ч">
+                <span>ч</span>
+            </div>
+            <div class="keyboard-key" data-char="с">
+                <span>с</span>
+            </div>
+            <div class="keyboard-key" data-char="м">
+                <span>м</span>
+            </div>
+            <div class="keyboard-key" data-char="и">
+                <span>и</span>
+            </div>
+            <div class="keyboard-key" data-char="т">
+                <span>т</span>
+            </div>
+            <div class="keyboard-key" data-char="ь">
+                <span>ь</span>
+            </div>
+            <div class="keyboard-key" data-char="б">
+                <span>б</span>
+            </div>
+            <div class="keyboard-key" data-char="ю">
+                <span>ю</span>
+            </div>
+            <div class="keyboard-key" data-char=",">
+                <span>,</span>
+            </div>
+        </div>
+        <div class="keyboard-key-grid-fourth">
+            <div class="keyboard-key" data-char=" ">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>
